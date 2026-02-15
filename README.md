@@ -2,7 +2,7 @@
 
 A small, rolling LIFO stack for .NET. When the stack reaches capacity, new pushes overwrite the oldest items without reallocating or reorganizing the underlying array.
 
-[![ci](https://github.com/troygeiger/TG.RollingStack/actions/workflows/ci.yml/badge.svg)](https://github.com/troygeiger/TG.RollingStack/actions/workflows/ci.yml)
+[![Test/Build](https://github.com/troygeiger/TG.RollingStack/actions/workflows/ci.yml/badge.svg)](https://github.com/troygeiger/TG.RollingStack/actions/workflows/ci.yml)
 
 ## Features
 
