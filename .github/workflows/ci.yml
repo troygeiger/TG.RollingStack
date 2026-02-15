@@ -1,5 +1,10 @@
 name: ci
 
+permissions:
+  contents: read
+  checks: write
+  pull-requests: write
+
 on:
   push:
     branches:
@@ -32,7 +37,22 @@ jobs:
         run: dotnet build --configuration Release --no-restore
 
       - name: Test
-        run: dotnet test --configuration Release --no-build --collect:"XPlat Code Coverage"
+        run: dotnet test --configuration Release --no-build --collect:"XPlat Code Coverage" --logger "trx;LogFileName=test-results.trx" --results-directory ./TestResults
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: ./TestResults
+
+      - name: Publish test report
+        if: always()
+        uses: dorny/test-reporter@v2.5.0
+        with:
+          name: test-results
+          path: ./TestResults/**/*.trx
+          reporter: dotnet-trx
 
   pack_publish:
     runs-on: ubuntu-latest
