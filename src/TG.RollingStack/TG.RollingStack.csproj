@@ -13,9 +13,10 @@
 		<PackageIcon>TG.png</PackageIcon>
         <MinVerTagPrefix>v</MinVerTagPrefix>
 		<MinVerDefaultPreReleaseIdentifiers>preview.0</MinVerDefaultPreReleaseIdentifiers>
-		<MinVerMinimumMajorMinor>3.0</MinVerMinimumMajorMinor>
+		<MinVerMinimumMajorMinor>1.0</MinVerMinimumMajorMinor>
 		<MinVerVerbosity>normal</MinVerVerbosity>
         <RepositoryType>git</RepositoryType>
+        <RepositoryUrl>https://github.com/troygeiger/TG.RollingStack</RepositoryUrl>
     </PropertyGroup>
     <ItemGroup>
         <None Include="..\..\README.md">
