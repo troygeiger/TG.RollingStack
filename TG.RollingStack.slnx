@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/TG.RollingStack/TG.RollingStack.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/TG.RollingStack.Tests/TG.RollingStack.Tests.csproj" />
+  </Folder>
+</Solution>
